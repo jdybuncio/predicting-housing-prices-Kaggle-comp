@@ -54,6 +54,6 @@ def cleaning_ames_df(df):
 
     total_cols = important_cols + important_cols_cal
     X = df[total_cols].fillna(0)
-    y = df.SalePrice
+    # y = df.SalePrice
 
-    return X,y
+    return X
