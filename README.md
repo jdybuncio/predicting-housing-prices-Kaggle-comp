@@ -8,7 +8,7 @@ I recently ran into a competition online to use a dataset from Ames, Iowa to pre
 ## Initial Approach
 
 <p align="center">
-  <img src="images/ny_trend.jpeg" width = 800>
+  <img src="images/iowa_house.jpeg" width = 800>
 </p>
 
 The picture above is a random photo I got after googling “Homes in Ames, Iowa.”
@@ -34,7 +34,7 @@ I know of a couple people who have recently bought a home and have heard from th
 The edge of my abilities usually ended somewhere like the following graph shows. I could find which of the 72 variables, also known as “features,” are most correlated with Sale Price and then plot that one feature with Sale Price and hope for a linear relationship and plot a “best-fit” line.
 
 <p align="center">
-  <img src="images/ny_trend.jpeg" width = 800>
+  <img src="images/line_graph.jpeg" width = 800>
 </p>
 
 The graph above would mean that I could take any house in Ames, Iowa and as long as I knew the house’s Square Footage, I could utilize the red trend line above to give a prediction of the House’s Sale Price. While this is informed relative to purely guessing, you can see how the trend line doesn’t capture the points highlighted in squares well. By only using this line, we are also ignoring the other 71 other features which may help us to make better predictions.
@@ -52,7 +52,7 @@ Building off of the two concepts described above and also knowing that there mus
 * Random Forest and Gradient Boosting models can be used to help predict linear and non-linear data. The core concept is to split the data in such a way to yield an accurate prediction using Decision Trees. One path could be something like what is shown in the tree below.
 
 <p align="center">
-  <img src="images/ny_trend.jpeg" width = 800>
+  <img src="images/tree.jpeg" width = 800>
 </p>
 
 * There are a lot of numbers, but the main things to see are that another way to split the data is by doing something like the tree above shows. We could start with all 1,460 houses who have an average Sale Price of $181k at the top, aka the root node. We then split based on if the Overall Quality of the house is rated above or below 7.5. That creates two branches below. At this level, each branch is then split based on how much Square Footage is in the house and then that yields a prediction as to the price of the house which is shown in the “Value” field at the bottom level. This is an example of one Regression Tree which has a max-depth of 2 (i.e. two sub-levels). Random Forest and Gradient Boost models fit and combine several Regression Trees which work through sets of features in order to minimize over-fitting. I won't go into these models' difference in this repo.
