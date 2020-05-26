@@ -5,6 +5,9 @@ I recently ran into a competition online to use a dataset from Ames, Iowa to pre
 *by J.DyBuncio*
 *5/3/2020*
 
+## Accessibility to the Code
+To follow along, I have provided the python notebook I used, titled, **Exploration_File.ipynb** in the master branch of this github repo. 
+
 ## Initial Approach
 
 <p align="center">
